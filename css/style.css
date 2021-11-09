@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 *{
   padding: 0;
   margin: 0;
+   
+  font-family: 'Poppins' sans-serif;
 }
 .wrapper{
   background: url("../img/bg.jpg") no-repeat;
@@ -44,7 +47,7 @@
 }
 .wrapper .center{
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 55%;
   transform: translate(-50%, -50%);
   font-family: sans-serif;
@@ -52,7 +55,7 @@
 }
 .center h1{
   color: #ffffff;;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: bold;
   text-shadow: 1px 1px  black;
   width: 800px;
@@ -62,21 +65,74 @@
   animation: moveInRight 1s ease-out;
   
 }
-.center h2{
-  color: white;
-  font-size: 50px;
+.wrapper1{
+  color: #fff;
+  font-size: 35px;
   font-weight: bold;
   text-shadow: 1px 1px  black;
-  width: 885px;
-  margin-top: 10px;
-  margin-left: 5em;
-  margin-right: 3em;
+  display: flex;
   text-align: center;
+  margin-left: 5em;
+  margin-right: 8em;
   animation: moveInLeft 1s ease-out;
 }
+.wrapper1 .static-txt{
+  color: red;
+  font-size: 70px;
+  font-weight: 400;
+  text-shadow: 1px 1px  white;
+}
+.wrapper1  .dynamic-txt{
+margin-left: 15px;
+line-height: 90px;
+ height: 90px;
+ overflow: hidden;
+}
+.dynamic-txt li{
+ position: relative;
+list-style: none;
+top: 0;
+color:white;
+font-weight: 100;
+text-shadow: 1px 1px  black;
+font-size: 50px;
+border-radius: 10%;
+background:rgba(0, 0, 0, 0.4);
+animation: slide 12s  steps(4) infinite;
+}
+@keyframes slide{
+  100%{
+    top:-360px;
+  }
+}
+.dynamic-txt li{
+position: relative;
+}
+.dynamic-txt li ::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+background:url("../img/pic.jpg") ;
+ background-position: cover;
+ max-height: 500px;
+ max-width: 500px;
+ border-left: 2px solid orangered;
+ animation: typing 3s steps(18) infinite;
+}
+ @keyframes typing{
+  40%,
+  60%{
+    left: calc(95% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+ }
+
 .center .buttons{
   margin: 35px 450px; 
-   
    
 }
  
