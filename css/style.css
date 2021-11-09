@@ -17,6 +17,7 @@
 }
 
 .navbar {
+  position: fixed;
   height: 80px;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
@@ -255,7 +256,7 @@
  
 }
 .inner-container{
-  width: 98.2%;
+  width: 99.8%;
   float: right;
   background-color: #fdfdfd;
   
@@ -267,17 +268,50 @@
 }
 
 .text {
-  margin-top: 10em;
-  margin-left: 2em;
+  display: flex;
+  margin-top: 5em;
+  margin-right: 4em;
+  margin-left: -5em;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   color: #545454;
   line-height: 30px;
   text-align: justify;
+  padding: 2em;
   margin-bottom: 40px;
 }
 .skills{
-  
+  margin-top: -5em;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 4em;
+  text-align: center;
+}
+@media screen and (max-width:1200px) {
+  .inner-container{
+    padding: 80px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .about-section{
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+  .inner-container{
+     width: 100%;
+  }
+}
+@media screen and (max-width:600px) {
+  .about-section{
+    padding: 0;
+    text-align: center;
+   
+  }
+  .inner-container{
+    padding: 60px;
+  }
 }
 
 /* End of About us section */
