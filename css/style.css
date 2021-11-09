@@ -59,7 +59,6 @@
   font-weight: bold;
   text-shadow: 1px 1px  black;
   width: 800px;
-  margin-left: 3em;
   margin-right: 3em;
   text-align: center;
   animation: moveInRight 1s ease-out;
@@ -67,13 +66,12 @@
 }
 .wrapper1{
   color: #fff;
-  font-size: 35px;
+  font-size: 20px;
   font-weight: bold;
   text-shadow: 1px 1px  black;
   display: flex;
   text-align: center;
-  margin-left: 5em;
-  margin-right: 8em;
+  margin-left: 10em;
   animation: moveInLeft 1s ease-out;
 }
 .wrapper1 .static-txt{
@@ -132,7 +130,7 @@ background:url("../img/pic.jpg") ;
  }
 
 .center .buttons{
-  margin: 35px 450px; 
+  margin: 35px 350px; 
    
 }
  
