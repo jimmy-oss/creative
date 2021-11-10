@@ -324,7 +324,15 @@
 }
 
 /* End of About us section */
-
+.inner{
+  overflow: hidden;
+}
+.inner img{
+  transition: 1.5s all ease;
+}
+.inner:hover img{
+  transform: scale(1.5);
+}
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
