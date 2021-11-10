@@ -478,9 +478,10 @@
 /* Caption text */
 .mytext {
   font-size: 30px;
-  background-color: aqua;
-  font-family: fantasy;
-  border-radius: 4rem;
+  background: #545454;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-family: Berkshire;
   text-align: center;
 }
 
