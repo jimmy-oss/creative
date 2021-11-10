@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="./css/themify-icons.css">
   <link rel="stylesheet" href="./css/et-line/style.css">
   <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" >
-   <script src="./slider.js"></script>
  <title>Creative design</title>
 </head>
 <body>
@@ -136,7 +135,7 @@ But here are my few projects I have built and deployed them on my github reposit
   </div>
   <div class="separated" style="margin-top: 6em;"></div>
   <div class="slides">
-     <h2 style="text-align: center; margin-top: 12em; font-size: 25px; color: black; text-shadow: 1px 1px white;"><span><em> Hobbies &amp; Passion</em></span></h2>
+     <h2 style="text-align: center; margin-top: 10em; font-size: 25px; color: black; text-shadow: 1px 1px white;"><span><em> Hobbies &amp; Passion</em></span></h2>
   <div class="slideshow-container" id="hobbies-section">
    <div class="mySlides fade">
      <div class="numbertext">1 / 1</div>
@@ -175,6 +174,34 @@ But here are my few projects I have built and deployed them on my github reposit
      <span class="dot" onclick="currentSlide(5)"></span>
    </div>
    </div>
+   <script>
+     var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+   </script>
    
 </body>
 </html>
