@@ -277,11 +277,30 @@ But here are my few projects I have built and deployed them on my github reposit
         Progress:function(){
           let swiper = this;
           for(let i = 0; i< swiper.slides.length; i ++){
-              let slideProgress = swiper.slides
+              let slideProgress = swiper.slides[i].Progress,
+              innerOffset = swiper.width * innerLeaveOffset,
+              innerTranslate = slideProgress * innerOffset;
+
+              swiper.slides[i].querySelector(".slide-bg-img").style.transform = "translateX(" + innerTranslate + "px )";
           }
+
+        },
+        touchStart:function(){
+             let swiper = this;
+             for(let i = 0; i <swiper.slides.length; i ++){
+               swiper.slides[i].style.transition = "";
+             }
+        },
+        setTransition:function(speed){
+              let swiper = this;
+              for(let i = 0; i < swiper.slides.length; i ++){
+              swiper.slides[i].style.transition = speed + "ms";
+              swiper.slides[i].style.querySelector(".slide-bgimg").style.transition = speed + "ms";
+              }
         }
       }
-    }
+    };
+    let 
   </script>
 </body>
 </html>
