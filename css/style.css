@@ -166,12 +166,15 @@
   font-size: 18px;
   font-weight: bold;
   color: #fff;
-  background: red;
+  background:#cf2e2e;
   border: 1px solid #cc0000;
   outline: none;
   cursor: pointer;
   border-radius: 25px;
   animation: moveInBottom 1s ease-out;
+}
+.buttons:hover{
+  background:#902020;
 }
 
 @keyframes moveInLeft {
