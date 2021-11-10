@@ -530,5 +530,8 @@ padding: 0;
    visibility: hidden;
 }
 .swipper-button-prev{
-  
+  transform: rotateX(50px);
+}
+.swipper-button-next{
+  transform: rotateX(-50px);
 }

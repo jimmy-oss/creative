@@ -241,5 +241,47 @@ But here are my few projects I have built and deployed them on my github reposit
 </div>
 </div>
   </div>
+  <script>
+    let mainSliderSelector = 'main-slider',
+          navSliderSelector = 'nav-slide',
+          interLeaveOffset = 0.5;
+
+    let mainSliderOptions = {
+      loop:true,
+      speed = 1000,
+      autoplay:{
+        delay:3000
+      },
+      loopAdditionalSlides:10,
+      grabSlidesProgress:true,
+      navigation:{
+        nextEl: 'swiper-button-next',
+        prevEl: 'swiper-button-prev',
+      },
+      on:{
+          init:function(){
+               this.autoplay.stop();
+        },
+        imagesReady:function(){
+            this.el.classList.remove("loading");
+            this.autoplay.start();
+        },
+        slideChangeTransitionEnd:function(){
+          let swiper = this,
+          captions = swiper.el.querySelectorAll(".caption");
+          for(let i = 0;i < captions.length; ++i){
+              captions[i].classList.remove("show");
+          }
+          swiper.slides[swiper.activeIndex].querySelector(".caption").classList.add("show");
+        },
+        Progress:function(){
+          let swiper = this;
+          for(let i = 0; i< swiper.slides.length; i ++){
+              let slideProgress = swiper.slides
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>
