@@ -439,12 +439,13 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
- backface-visibility: hidden;
  min-height: 100vh;
+ 
 }
 .mySlides {
-  display: none
+  display: none;
 }
+
 
 /* Next & previous buttons */
 .prev, .next {
