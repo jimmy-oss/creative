@@ -315,3 +315,30 @@
 }
 
 /* End of About us section */
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top: 8em;
+  font-size: 25px;
+  font-family: 'Poppins' sans-serif ;  
+}
+.card-title h5{
+  font-size: 12px;
+}
+.column {
+  float: left;
+  width: 30%;
+  padding: 0 18px;
+}
+.row {
+  margin: 0 -2px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
