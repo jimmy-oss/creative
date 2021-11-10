@@ -342,3 +342,44 @@
   display: table;
   clear: both;
 }
+
+.separated{
+  background-image:url("../img/border.png");
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-repeat: repeat-x;
+  background-size: auto 6px;
+  background-position: center;
+  background-color: #545454;
+  
+}
+.box1{
+ background: #545454;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-top: 8em;
+  display: table;
+  float: left;
+  width: 30%; 
+  
+}
+.box1::before{
+  content: "";
+  position: absolute;
+  top: -220px;
+  left: -220px;
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
+  z-index: -1;
+  background-color: #0b0b13;
+  transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s; 
+}
+.box1::after{
+  content: "";
+  position: absolute;
+  top: -72px;
+}
