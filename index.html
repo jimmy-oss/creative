@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/themify-icons.css">
   <link rel="stylesheet" href="./css/et-line/style.css">
   <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" >
+   <script src="./slider.js"></script>
  <title>Creative design</title>
 </head>
 <body>
@@ -133,197 +134,45 @@ But here are my few projects I have built and deployed them on my github reposit
     </div>
   </div>
   </div>
-  <div class="swiper-container main-slider loading">
-    <div class="swipper-wrapper">
-      <div class="swiper-slide">
-        <figure class="slide-bgimg" style="background: url(./img/hiking.jpeg);">
-          <img src="./img/hiking.jpeg" class="entity-img">
-        </figure>
-        <div class="content">
-          <p class="title">First Slide</p>
-          <span class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, illum.</span>
-        </div>
-      </div>
-      <div class="swipper-wrapper">
-        <div class="swiper-slide">
-          <figure class="slide-bgimg" style="background: url(./img/amusements.jpg);">
-            <img src="./img/amusements.jpg" class="entity-img">
-          </figure>
-          <div class="content">
-            <p class="title">Second Slide</p>
-            <span class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, illum.</span>
-          </div>
-        </div>
-        <div class="swipper-wrapper">
-          <div class="swiper-slide">
-            <figure class="slide-bgimg" style="background: url(./img/chess.jpg);">
-              <img src="./img/chess.jpg" class="entity-img">
-            </figure>
-            <div class="content">
-              <p class="title">Third Slide</p>
-              <span class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, illum.</span>
-            </div>
-          </div>
-          <div class="swipper-wrapper">
-            <div class="swiper-slide">
-              <figure class="slide-bgimg" style="background: url(./img/gaming.jpg);">
-                <img src="./img/gaming.jpg" class="entity-img">
-              </figure>
-              <div class="content">
-                <p class="title">Fourth Slide</p>
-                <span class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, illum.</span>
-              </div>
-            </div>
-            <div class="swipper-wrapper">
-              <div class="swiper-slide">
-                <figure class="slide-bgimg" style="background: url(./img/movies.jpg);">
-                  <img src="./img/movies.jpg" class="entity-img">
-                </figure>
-                <div class="content">
-                  <p class="title">fifth Slide</p>
-                  <span class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, illum.</span>
-                </div>
-              </div>
-    </div>
-    <div class="swiper-button-prev swiper-button-white"></div>
-    <div class="swiper-button-next swiper-button-white"></div>
-  </div>
-  <div class="swiper-container nav-slide loading">
-    <div class="swipper-wrapper" role="navigation">
-      <div class="swiper-slide">
-        <figure class="slide-bgimg">
-          <figure class="slide-bgimg" style="background: url(./img/hiking.jpeg);">
-            <img src="./img/hiking.jpeg" class="entity-img">
-          </figure>
-          <div class="content">
-            <p class="title">First Slide</p>
-        </figure>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <figure class="slide-bgimg">
-        <figure class="slide-bgimg" style="background: url(./img/chess.jpg);">
-          <img src="./img/chess.jpg" class="entity-img">
-        </figure>
-        <div class="content">
-          <p class="title">Second Slide</p>
-      </figure>
-    </div>
-  </div>
-  <div class="swiper-slide">
-    <figure class="slide-bgimg">
-      <figure class="slide-bgimg" style="background: url(./img/amusements.jpg);">
-        <img src="./img/amusements.jpg" class="entity-img">
-      </figure>
-      <div class="content">
-        <p class="title">Third Slide</p>
-    </figure>
-  </div>
-</div>
-<div class="swiper-slide">
-  <figure class="slide-bgimg">
-    <figure class="slide-bgimg" style="background: url(./img/chess.jpg);">
-      <img src="./img/chess.jpg" class="entity-img">
-    </figure>
-    <div class="content">
-      <p class="title">Fourth Slide</p>
-  </figure>
-</div>
-</div>
-<div class="swiper-slide">
-  <figure class="slide-bgimg">
-    <figure class="slide-bgimg" style="background: url(./img/movies.jpg);">
-      <img src="./img/movies.jpg" class="entity-img" >
-    </figure>
-    <div class="content">
-      <p class="title">Firth Slide</p>
-  </figure>
-</div>
-</div>
-  </div>
-  <script>
-    let mainSliderSelector = 'main-slider',
-          navSliderSelector = 'nav-slide',
-          interLeaveOffset = 0.5;
-
-    let mainSliderOptions = {
-      loop:true,
-      speed = 1000,
-      autoplay:{
-        delay:3000
-      },
-      loopAdditionalSlides:10,
-      grabSlidesProgress:true,
-      navigation:{
-        nextEl: 'swiper-button-next',
-        prevEl: 'swiper-button-prev',
-      },
-      on:{
-          init:function(){
-               this.autoplay.stop();
-        },
-        imagesReady:function(){
-            this.el.classList.remove("loading");
-            this.autoplay.start();
-        },
-        slideChangeTransitionEnd:function(){
-          let swiper = this,
-          captions = swiper.el.querySelectorAll(".caption");
-          for(let i = 0;i < captions.length; ++i){
-              captions[i].classList.remove("show");
-          }
-          swiper.slides[swiper.activeIndex].querySelector(".caption").classList.add("show");
-        },
-        Progress:function(){
-          let swiper = this;
-          for(let i = 0; i< swiper.slides.length; i ++){
-              let slideProgress = swiper.slides[i].Progress,
-              innerOffset = swiper.width * innerLeaveOffset,
-              innerTranslate = slideProgress * innerOffset;
-
-              swiper.slides[i].querySelector(".slide-bg-img").style.transform = "translateX(" + innerTranslate + "px )";
-          }
-
-        },
-        touchStart:function(){
-             let swiper = this;
-             for(let i = 0; i <swiper.slides.length; i ++){
-               swiper.slides[i].style.transition = "";
-             }
-        },
-        setTransition:function(speed){
-              let swiper = this;
-              for(let i = 0; i < swiper.slides.length; i ++){
-              swiper.slides[i].style.transition = speed + "ms";
-              swiper.slides[i].style.querySelector(".slide-bgimg").style.transition = speed + "ms";
-              }
-        }
-      }
-    };
-    let mainSlider = new Swiper(mainSliderSelector,mainSliderOptions);
-    let navSliderOption = {
-      loop:true,
-      loopAdditionalSlides:true,
-      speed: 1000,
-      spaceBetween:5,
-      speedPerView:5,
-      centeredSlides:true,
-      touchRatio:0.2,
-      slideToClickedSlide:true,
-      direction:'vertical',
-      on:{
-        imagesReady:function(){
-           this.el.classList.remove("loading");
-        },
-        click:function() {
-          mainSlider.autoplay.stop();
-        }
-      }
-    };
-    let  navSlider = new Swiper(navSliderSelector, navSliderOption);
-
-    mainSlider.controller.control = navSlider;
-    navSlider.controller
-  </script>
+     <h2 style="text-align: center;"><span><em> Hobbies &amp; Passion</em></span></h2>
+  <div class="slideshow-container" style="top: -8em;">
+   <div class="mySlides fade">
+     <div class="numbertext">1 / 1</div>
+     <img src="./img/amusements.jpg" style="width:100% ;">
+     <div class="mytext">I love playing a game of <b>chess</b> ♚</div>
+   </div>
+   <div class="mySlides fade">
+     <div class="numbertext">2 / 2</div>
+     <img src="./img/chess.jpg" style="width:100%;">
+     <div class="mytext">I love <b>hiking</b> and <b>travelling</b> around the world 🚶</div>
+   </div>
+   <div class="mySlides fade">
+     <div class="numbertext">3 / 3</div>
+     <img src="./img/gaming.jpg" style="width:100%;">
+     <div class="mytext">I love playing <b>video games</b> such as fifa 🎮</div>
+   </div>
+   <div class="mySlides fade">
+     <div class="numbertext">4 /4 </div>
+     <img src="./img/movies.jpg" style="width:100%;">
+     <div class="mytext">I love watching <b>movies and series</b> 🎥</div>
+   </div>
+   <div class="mySlides fade">
+     <div class="numbertext">5 / 5</div>
+     <img src="./img/hiking.jpeg" style="width:100%;">
+     <div class="mytext"> And the Last but not the least I love taking <b>pictures and photos</b> 📷</div>
+   </div>
+   <a class="prev" onclick="plusSlides(-1)">❮</a>
+   <a class="next" onclick="plusSlides(1)">❯</a>
+   </div>
+   <br>
+   <div style="text-align:center">
+     <span class="dot" onclick="currentSlide(1)"></span> 
+     <span class="dot" onclick="currentSlide(2)"></span> 
+     <span class="dot" onclick="currentSlide(3)"></span>
+     <span class="dot" onclick="currentSlide(4)"></span>
+     <span class="dot" onclick="currentSlide(5)"></span>
+   </div>
+   </div>
+   
 </body>
 </html>
