@@ -401,3 +401,30 @@
 .box2{
   margin-left: 2em;
 }
+.box1 .icon{
+  line-height: 60px;
+  font-size: 40px;
+  color: white;
+}
+.box1 .content{
+  padding-top: 25px;
+}
+.box1 h5{
+  margin-bottom: 30px;
+  color: white;
+  font-size: 25px;
+}
+.box1:hover::before{
+  top: -72px;
+  left: -40px;
+  border-radius: 50%;
+}
+.box1:hover::after{
+  content: "";
+  width: 120%;
+  left: -10%;
+  top: -10%;
+  height: 120%;
+  border-radius: 0;
+  transition: cubic-bezier(0.39, 0.58, 0.57, 1) all 0.55s; 
+}
