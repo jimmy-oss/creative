@@ -550,18 +550,18 @@ background-size: cover;
   width: 47%;
   background: transparent;
   margin: 30px 5px;
-  color:aqua;
+  color:white;
   font-size: 20px;
-  font-family: 'Fleur De Leah', cursive;
+  font-family:  serif;
 }
 
 .form-contact textarea  {
   margin-top: 20px;
   width: 100%;
   background: transparent;
-  color:aqua;
+  color:white;
   font-size: 20px;
-  font-family: 'Fleur De Leah', cursive;
+  font-family:  serif;
 }
 
 .form-contact {
@@ -576,7 +576,7 @@ background-size: cover;
 }
 
 ::placeholder {
-  font-size: 15px;
+  font-size: 18px;
   padding-left: 5px;
   color: #fff;
 }
@@ -592,7 +592,7 @@ background-size: cover;
      background-color:brown;
      color: white;
      border-radius:  2rem,white;
-     width: 15%;
+     width: 10%;
      
       
 }
@@ -602,9 +602,9 @@ background-size: cover;
 }
 .social ul{
      position: absolute;
-     left: 50%;
+     left: 45%;
      padding: 0;
-     margin: 3%;
+     margin: 8%;
      transform: translate(-50% ,-50%);
      display: flex;
      padding-right: 6%;
@@ -636,7 +636,7 @@ background-size: cover;
  
 .footer{
   text-align: center;
-  margin: 6%;
+  margin: 12%;
   padding-left: 15%;
   padding-right: 5%;
 }
